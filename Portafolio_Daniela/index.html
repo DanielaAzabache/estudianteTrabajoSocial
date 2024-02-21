@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Portafolio de Daniela Azabache Vilchez</title>
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+
+	
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <img src="img/foto2.png" alt="Image">
+                </div>
+                <div class="sidebar-content">
+                    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                        <a href="#" class="navbar-brand">Navigation</a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#header">Principal<i class="fa fa-home"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">Sobre mi<i class="fa fa-address-card"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#education">Educación<i class="fa fa-address-card"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#experience">Experiencia<i class="fa fa-star"></i></a>
+                                </li>
+                                <!---<li class="nav-item">
+                                    <a class="nav-link" href="#service">Servicios<i class="fa fa-tasks"></i></a>
+                                </li>-->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#portfolio">Portafolio<i class="fa fa-file-archive"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contacto<i class="fa fa-envelope"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="sidebar-footer">
+                    <a href="https://www.instagram.com/danii.azavilchez/?hl=es-la"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/daniela.azavilchez"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/daniela-azabache-vilchez-210615247/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="content">
+                <!-- Header Start -->
+                <div class="header" id="header">
+                    <div class="content-inner">
+						<img src="img/daniela.jpeg" alt="Image" style="width:30%; float:right;">
+                        <p>Yo soy</p>
+						
+                        <h1>Daniela Azabache Vilchez</h1>
+                        <h2></h2>
+                        <div id="divTexto"></div>
+                        <script>
+                            function escribirYBorrarFrase(frase, elemento, velocidadEscritura, velocidadBorrado, tiempoEspera) {
+                              let index = 0;
+                              const intervaloEscritura = setInterval(function() {
+                                if (index < frase.length) {
+                                  elemento.textContent += frase[index];
+                                  index++;
+                                } else {
+                                  clearInterval(intervaloEscritura);
+                                  setTimeout(function() {
+                                    borrarFrase(frase, elemento, velocidadBorrado);
+                                  }, tiempoEspera);
+                                }
+                              }, velocidadEscritura);
+                            }
+                            
+                            function borrarFrase(frase, elemento, velocidadBorrado) {
+                              let index = frase.length - 1;
+                              const intervaloBorrado = setInterval(function() {
+                                if (index >= 0) {
+                                  elemento.textContent = frase.substring(0, index);
+                                  index--;
+                                } else {
+                                  clearInterval(intervaloBorrado);
+                                  escribirYBorrarFrase(frase, elemento, velocidadEscritura, velocidadBorrado, tiempoEspera);
+                                }
+                              }, velocidadBorrado);
+                            }
+                            
+                            const frase = "Estudiante de Trabajo Social de la Universidad Nacional de Trujillo";
+                            const elemento = document.getElementById("divTexto");
+                            const velocidadEscritura = 40; // Milisegundos entre cada caracter al escribir
+                            const velocidadBorrado = 40; // Milisegundos entre cada caracter al borrar
+                            const tiempoEspera = 800; // Tiempo de espera antes de borrar y volver a escribir (en milisegundos)
+                            
+                            escribirYBorrarFrase(frase, elemento, velocidadEscritura, velocidadBorrado, tiempoEspera);
+                        </script>
+						
+                    </div>
+                </div>
+                <!-- Header End -->
+                
+                <!-- Large Button Start -->
+                <div class="large-btn">
+                    <div class="content-inner">
+                        <a class="btn" href="#"><i class="fa fa-download"></i>Resumen</a>
+                        <a class="btn" href="#"><i class="fa fa-hands-helping"></i>Contratame</a>
+                    </div>
+                </div>
+                <!-- Large Button End -->
+                
+                <!-- About Start -->
+                <div class="about" id="about">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h2>Sobre mi</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6 col-lg-5">
+                                <img src="img/foto2.png" alt="Image">
+                            </div>
+                            <div class="col-md-6 col-lg-7">
+                                <p>
+                                    Soy Dani, una apasionada estudiante comprometida con mi carrera. 
+                                    Mi enfoque se centra en el bienestar social y 
+                                    la integridad buscando activamente maneras de impactar positivamente en la vida de las personas y 
+                                    comunidades vulnerables.</p>
+                                <a class="btn" href="#">Contratame</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="skills">
+                                    <div class="skill-name">
+                                        <p>Investigación</p><p>45%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-text">45%</div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>Educación</p><p>20%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 25%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-text">20%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="skills">
+                                    <div class="skill-name">
+                                        <p>Trabajo Comunitario</p><p>90%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-text">90%</div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>Justicia Social</p><p>80%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-text">80%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- About End -->
+                
+                <!-- Education Start -->
+                <div class="education" id="education">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h2>Educación</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="edu-col">
+                                    <span>Mayo - 2022 <i>hasta la</i> Actualidad</span>
+                                    <h3>BACHILLERATO</h3>
+                                    <p><strong>UNIVERSIDAD NACIONAL DE TRUJILLO</strong></p>
+                                    <p>Escuela Profesional de Trabajo Social, en curso.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="edu-col">
+                                    <span>2007 <i>hasta</i> 2012</span>
+                                    <h3>EDUCACIÓN PRIMARIA</h3>
+                                    <p>I.E. "República Argentina" 80008 - Trujillo</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="edu-col">
+                                    <span>2013 <i>hasta</i> 2017</span>
+                                    <h3>EDUCACIÓN SECUNDARIA</h3>
+                                    <p>María Negrón Ugarte - Trujillo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Education Start -->
+                
+                <!-- Experience Start -->
+                <div class="experience" id="experience">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h2>Experiencia</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="exp-col">
+                                    <span>2023</span>
+                                    <h3>Taller de Habilidades Blandas</h3>
+                                    <h4>I.E. Ramón Castilla de la comunidad de Vichaycocha - Huaral</h4>
+                                    <h5>Practicante</h5>
+                                    <p>Estuve a cargo de la exposición del tema y siendo facilitadora de las dinámicas durante el taller.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="exp-col">
+                                    <span>2024</span>
+                                    <h3>Trabajo Social Comunitario</h3>
+                                    <h4>Las Pampas, Caserío de La Arena - Huamachuco</h4>
+                                    <h5>Estudiante y Practicante</h5>
+                                    <p>Realicé una investigación específica de los antecedentes históricos de la comunidad con un enfoque de recopilar y 
+                                        sintetizar datos relevantes, teniendo como producto final una línea de tiempo de la comunidad.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="exp-col">
+                                    <span>2023</span>
+                                    <h3>Mi comunidad y Yo</h3>
+                                    <h4>Menocucho - Laredo</h4>
+                                    <h5>Practicante</h5>
+                                    <p>Se centró en identificar el sentido de pertenencia de los pobladores y la participación comunitaria.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience Start -->
+                
+                <!-- Service Start 
+                <div class="service" id="service">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h2>Servicios</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="srv-col">
+                                    <i class="fa fa-desktop"></i>
+                                    <h3>Investigación</h3>
+                                    <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="srv-col">
+                                    <i class="fa fa-laptop"></i>
+                                    <h3>Educación</h3>
+                                    <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="srv-col">
+                                    <i class="fa fa-search"></i>
+                                    <h3>Trabajo Comunitario</h3>
+                                    <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="srv-col">
+                                    <i class="fa fa-envelope-open-text"></i>
+                                    <h3>Justicia Social</h3>
+                                    <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Portfolio Start -->
+                <div class="portfolio" id="portfolio">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h2>Portafolio</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul id="portfolio-flters">
+                                    <li data-filter="*" class="filter-active">Todo</li>
+                                    <!--<li data-filter=".web-des">Educación</li>
+                                    <li data-filter=".web-dev">Trabajo Comunitario</li>
+                                    <li data-filter=".dig-mar">Investigación</li>-->
+                                </ul>
+
+                                <script>
+                                    $(document).ready(function() {
+                                        $('#portfolio-flters li').on('click', function() {
+                                            $('#portfolio-flters li').removeClass('filter-active');
+                                            $(this).addClass('filter-active');
+                                            
+                                            var selectedFilter = $(this).data('filter');
+                                            
+                                            $('.portfolio-items').fadeTo(100, 0);
+                                            
+                                            $('.item').fadeOut().css('transform', 'scale(0)');
+                                            setTimeout(function() {
+                                                $('.item').each(function() {
+                                                    if ($(this).is(selectedFilter) || selectedFilter == '*') {
+                                                        $(this).fadeIn().css('transform', 'scale(1)');
+                                                    }
+                                                });
+                                                $('.portfolio-items').fadeTo(300, 1);
+                                            }, 300);
+                                        });
+                                    });
+                                    
+                                </script>
+                                
+                            </div>
+                        </div>
+                        <div class="row portfolio-container">
+                            <div class="col-lg-4 col-md-6 portfolio-item web-des">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/educacion.jpg" class="img-fluid" alt="">
+                                        <a href="img/educacion.jpg" data-lightbox="portfolio" data-title="Project Name" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Taller de Habilidades Blandas<span>Educación</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item web-des">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/educacion2.jpg" class="img-fluid" alt="">
+                                        <a href="img/educacion2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Taller de Habilidades Blandas <span>Educación</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/trabajo_comunitario.jpg" class="img-fluid" alt="">
+                                        <a href="img/trabajo_comunitario.jpg" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Proyecto Social <span>Trabajo Comunitario</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/trabajo_comunitario2.jpg" class="img-fluid" alt="">
+                                        <a href="img/trabajo_comunitario2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Proyecto Social <span>Trabajo Comunitario</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item dig-mar">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/trabajo_comunitario3.jpg" class="img-fluid" alt="">
+                                        <a href="img/trabajo_comunitario3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Proyecto Social <span>Trabajo Comunitario</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item dig-mar">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/investigacion.jpg" class="img-fluid" alt="">
+                                        <a href="img/investigacion.jpg" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Investigación y Diagnóstico<span>Investigación</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Start -->
+                
+                <!-- Contact Start -->
+                <div class="contact" id="contact">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h2>Contacto</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="contact-info">
+                                    <p><i class="fa fa-user"></i>Daniela Azabache Vilchez</p>
+                                    <p><i class="fa fa-tag"></i>Estudiante de Trabajo Social</p>
+                                    <p><i class="fa fa-envelope"></i><a href="dazabache@unitru.edu.pe">dazabache@unitru.edu.pe</a></p>
+                                    <!--<p><i class="fa fa-phone"></i><a href="tel:+1234567890">+123-456-7890</a></p>
+                                    <p><i class="fa fa-map-marker"></i>123 Street, Los Angeles, CA, USA</p>-->
+                                    <div class="social">
+                                        <!--<a class="btn" href=""><i class="fab fa-twitter"></i></a>-->
+                                        <a class="btn" href="https://www.facebook.com/daniela.azavilchez"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn" href="https://www.linkedin.com/in/daniela-azabache-vilchez-210615247/"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn" href="https://www.instagram.com/danii.azavilchez/?hl=es-la"><i class="fab fa-instagram"></i></a>
+                                        <!--<a class="btn" href=""><i class="fab fa-youtube"></i></a>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <input type="text" class="form-control" placeholder="Tu nombre" />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="email" class="form-control" placeholder="Tu correo" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Asunto" />
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="5" placeholder="Mensaje"></textarea>
+                                        </div>
+                                        <div><button class="btn" type="submit">Enviar Mensaje</button></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact End -->
+                
+                <!-- Footer Start -->
+                <div class="footer">
+                    <div class="content-inner">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p>&copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Powered by <a href="https://htmlcodex.com">HTML Codex</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Start -->
+            </div>
+        </div>
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
